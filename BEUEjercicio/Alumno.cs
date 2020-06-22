@@ -39,16 +39,25 @@ namespace BEUEjercicio
         [Display(Name = "Cedula")]
         public string cedula { get; set; }
 
-        [DataType(DataType.Date)]
+        
         [Display(Name = "Fecha de nacimiento")]
+        [DisplayFormat(DataFormatString="{0:dd/MMM/yyyy}")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fecha_nacimiento { get; set; }
 
         [DataType(DataType.Text)]
         [Display(Name = "Lugar de nacimiento")]
         public string lugar_nacimiento { get; set; }
+
+        [Display(Name = "Sexo")]
         public string sexo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Matricula> Matricula { get; set; }
+
+        public override string ToString()
+        {
+            return nombres + " " + apellidos;
+        }
     }
 }
