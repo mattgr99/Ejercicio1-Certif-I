@@ -85,7 +85,7 @@ namespace PryEjercicio.Controllers
         {
             if (ModelState.IsValid)
             {
-                AlumnoBLL.Update(alumno,id);
+                AlumnoBLL.Update(alumno);
                 return RedirectToAction("Index");
             }
             return View(alumno);

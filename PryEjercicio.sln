@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEUEjercicio", "BEUEjercici
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIEjercicio", "UIEjercicio\UIEjercicio.csproj", "{2DBD306A-F9A8-495A-97AA-DC0E5C0AA2CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiEscolastico", "WebApiEscolastico\WebApiEscolastico.csproj", "{808D5332-1548-4B28-B166-20FB83EFF732}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2DBD306A-F9A8-495A-97AA-DC0E5C0AA2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DBD306A-F9A8-495A-97AA-DC0E5C0AA2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DBD306A-F9A8-495A-97AA-DC0E5C0AA2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808D5332-1548-4B28-B166-20FB83EFF732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808D5332-1548-4B28-B166-20FB83EFF732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808D5332-1548-4B28-B166-20FB83EFF732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808D5332-1548-4B28-B166-20FB83EFF732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

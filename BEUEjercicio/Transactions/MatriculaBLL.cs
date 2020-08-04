@@ -106,5 +106,11 @@ namespace BEUEjercicio.Transactions
             DBEntities db = new DBEntities();
             return db.Matricula.ToList();
         }
+
+        public static List<Matricula> List(int id)
+        {
+            DBEntities db = new DBEntities();
+            return db.Matricula.Where(x => x.Alumno.idalumno == id).ToList();
+        }
     }
 }

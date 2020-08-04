@@ -9,10 +9,10 @@
 
 namespace BEUEjercicio
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Area
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,12 +22,11 @@ namespace BEUEjercicio
         }
     
         public int idarea { get; set; }
-        [Display(Name = "Área")]
         public string nombre { get; set; }
-        [Display(Name = "Coordinador")]
         public string coordinador { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+       [JsonIgnore]
         public virtual ICollection<Materia> Materia { get; set; }
     }
 }

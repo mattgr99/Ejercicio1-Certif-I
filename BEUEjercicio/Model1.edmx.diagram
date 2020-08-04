@@ -14,6 +14,7 @@
         <AssociationConnector Association="DBModel.FK_Materia_Area" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Calificacion_Matricula" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Matricula_Materia" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModel.Beca" Width="1.5" PointX="7.375" PointY="4.125" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

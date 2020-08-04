@@ -30,5 +30,6 @@ namespace BEUEjercicio
         public virtual DbSet<Calificacion> Calificacion { get; set; }
         public virtual DbSet<Materia> Materia { get; set; }
         public virtual DbSet<Matricula> Matricula { get; set; }
+        public virtual DbSet<Beca> Beca { get; set; }
     }
 }

@@ -54,7 +54,7 @@ namespace BEUEjercicio.Transactions
         }
 
 
-        public static void Update(Alumno alumno, int? id)
+        public static void Update(Alumno alumno)
         {
             using (DBEntities db= new DBEntities())
             {
@@ -63,7 +63,7 @@ namespace BEUEjercicio.Transactions
                 try
                 {
                         //db.Entry(alumno).State = System.Data.Entity.EntityState.Modified;
-                        alumno.idalumno = id.Value;
+                        //alumno.idalumno = id.Value;
                         db.Alumno.Attach(alumno);
                         db.Entry(alumno).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
@@ -115,6 +115,12 @@ namespace BEUEjercicio.Transactions
             //Los metodos del entity framework se denomina Linq, y la evaluacion de condiciones lambda
         }
 
+        public static List<Alumno> List(string criterio)
+        {
+            DBEntities db = new DBEntities();
+            return db.Alumno.Where(x => x.cedula.StartsWith(criterio)).ToList();
+        }
+
         public static List<Alumno> ListToNames()
         {
             DBEntities db = new DBEntities();
@@ -135,7 +141,7 @@ namespace BEUEjercicio.Transactions
             //starswith inicio de palabra
             //contains que contiene en cualquier lado de la cadena
             DBEntities db = new DBEntities();//Instancia del contexto
-            return db.Alumno.Where(x => x.apellidos.ToLower().StartsWith(criterio)).ToList();
+            return db.Alumno.Where(x => x.apellidos.ToLower().Contains(criterio)).ToList();
         }
 
         /*public static List<Alumno> GetAlumno(int id)
